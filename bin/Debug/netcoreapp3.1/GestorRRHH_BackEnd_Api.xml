@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GestorRRHH_BackEnd_Api</name>
+    </assembly>
+    <members>
+        <member name="T:GestorRRHH_BackEnd_Api.Controllers.AuthController">
+            <summary>
+            Para autenticación
+            </summary>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Controllers.AuthController.SolicitaReinicioClave(GestorRRHH_BackEnd_Api.Models.DTO.ResetPwdDTO)">
+            <summary>
+            Solicita reinicio de clave
+            </summary>
+            <param name="request">Datos para reinicio</param>
+            <returns></returns>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Controllers.AuthController.CambioDeClave(GestorRRHH_BackEnd_Api.Models.DTO.ActionResetPasswordDTO)">
+            <summary>
+            Reset password for a user
+            </summary>
+            <param name="payload"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GestorRRHH_BackEnd_Api.Controllers.EmployeeController">
+            <summary>
+            API para obtener administrar empleados
+            </summary>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Controllers.EmployeeController.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Controllers.EmployeeController.GetEmployeeName(System.Int64,System.String)">
+            <summary>
+            Obtener el nombre de un empleado con base a la empresa y su código de empleado
+            </summary>
+            <param name="CompanyID"></param>
+            <param name="EmployeeCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Controllers.EmployeeController.Post(GestorRRHH_BackEnd_Api.Models.DTO.EmployeeDTO)">
+            <summary>
+            Create new employee entity
+            </summary>
+            <param name="emp">Payload</param>
+            <returns></returns>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Controllers.RequestsController.Vacation(GestorRRHH_BackEnd_Api.Models.DTO.VacationDTO)">
+            <summary>
+            Request for vacation
+            </summary>
+            <param name="x">Entity for vacation</param>
+            <returns></returns>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Controllers.RequestsController.SalaryAdvance(GestorRRHH_BackEnd_Api.Models.DTO.SalaryAdvanceDTO)">
+            <summary>
+            Resquest for salary advance
+            </summary>
+            <param name="x">Payload request</param>
+            <returns></returns>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Controllers.RequestsController.CertificateRequest(GestorRRHH_BackEnd_Api.Models.DTO.CertificateRequestDTO)">
+            <summary>
+            Certificate request
+            </summary>
+            <param name="x">Payload</param>
+            <returns></returns>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Data.DbEmpleados.BuscaEmpleadoPorCodigo(System.Int64,System.String)">
+            <summary>
+            Buscar un empleado por código
+            </summary>
+            <param name="CompanyID"></param>
+            <param name="EmployeeCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Data.DbEmpleados.AgregarEmpleado(GestorRRHH_BackEnd_Api.Models.DTO.EmployeeDTO)">
+            <summary>
+            Agregar empleado
+            </summary>
+            <param name="employee"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Data.DbEmpleados.SolicitarReinicioDeClave(System.String)">
+            <summary>
+            Solicitar reinicio de clave
+            </summary>
+            <param name="correo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GestorRRHH_BackEnd_Api.Models.BaseRetorno">
+            <summary>
+            Default response
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.BaseRetorno.Codigo">
+            <summary>
+            Error code
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.BaseRetorno.Mensaje">
+            <summary>
+            Error message
+            </summary>
+        </member>
+        <member name="T:GestorRRHH_BackEnd_Api.Models.DTO.ActionResetPasswordDTO">
+            <summary>
+            Action for reset password
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.ActionResetPasswordDTO.userID">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.ActionResetPasswordDTO.OTP">
+            <summary>
+            OTP
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.ActionResetPasswordDTO.new_password_1">
+            <summary>
+            New password
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.ActionResetPasswordDTO.new_password_2">
+            <summary>
+            repeat new password
+            </summary>
+        </member>
+        <member name="T:GestorRRHH_BackEnd_Api.Models.DTO.CatalogDTO">
+            <summary>
+            Response for a catalog
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.CatalogDTO.items">
+            <summary>
+            the catalog series
+            </summary>
+        </member>
+        <member name="T:GestorRRHH_BackEnd_Api.Models.DTO.CatalogValue">
+            <summary>
+            Each value of the catalog
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.CatalogValue.value">
+            <summary>
+            value
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.CatalogValue.description">
+            <summary>
+            description
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.CatalogValue.enabled">
+            <summary>
+            if its enabled or not
+            </summary>
+        </member>
+        <member name="T:GestorRRHH_BackEnd_Api.Models.DTO.CertificateRequestDTO">
+            <summary>
+            DTO for Certificate
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.CertificateRequestDTO.CompanyID">
+            <summary>
+            Company ID
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.CertificateRequestDTO.EmployeeCode">
+            <summary>
+            Employee code
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.CertificateRequestDTO.TypeRequest">
+            <summary>
+            Type of certificate
+            </summary>
+            <remarks>1 - IGSS, 2 - Otro</remarks>
+            <example>1</example>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.CertificateRequestDTO.DateNeeded">
+            <summary>
+            Dated needed
+            </summary>
+            <example>2022-01-01</example>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.CertificateRequestDTO.UserID">
+            <summary>
+            User
+            </summary>
+        </member>
+        <member name="T:GestorRRHH_BackEnd_Api.Models.DTO.EmployeeDTO">
+            <summary>
+            Employee DTO
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.EmployeeDTO.companyID">
+            <summary>
+            Company ID
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.EmployeeDTO.employeeCode">
+            <summary>
+            Employee code
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.EmployeeDTO.employeeName">
+            <summary>
+            Employee names
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.EmployeeDTO.employeeLastName">
+            <summary>
+            employee last name (father)
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.EmployeeDTO.employeeLastName2">
+            <summary>
+            Employee last name (mother)
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.EmployeeDTO.employeeDOB">
+            <summary>
+            Employee date of birth
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.EmployeeDTO.UserID">
+            <summary>
+            user associated
+            </summary>
+        </member>
+        <member name="T:GestorRRHH_BackEnd_Api.Models.DTO.ResetPwdDTO">
+            <summary>
+            For password reset request
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.ResetPwdDTO.email">
+            <summary>
+            Associated email for the account
+            </summary>
+        </member>
+        <member name="T:GestorRRHH_BackEnd_Api.Models.DTO.SalaryAdvanceDTO">
+            <summary>
+            DTO por Salary Advance request
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.SalaryAdvanceDTO.CompanyID">
+            <summary>
+            Company ID
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.SalaryAdvanceDTO.EmployeeCode">
+            <summary>
+            Employee code
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.SalaryAdvanceDTO.typeRequest">
+            <summary>
+            Type of request;
+            1 - Bono14
+            2 - Aguinaldo
+            3 - Salario
+            </summary>
+            <example>1</example>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.SalaryAdvanceDTO.ammount">
+            <summary>
+            Ammount of salary advance
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.SalaryAdvanceDTO.dateTBD">
+            <summary>
+            Date to be disbursed. Format YYYY/MM/DD
+            </summary>
+            <example>2022-01-01</example>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.SalaryAdvanceDTO.dateTSP">
+            <summary>
+            Date to start payment. In case type is "Salario"
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.SalaryAdvanceDTO.numberOP">
+            <summary>
+            Number of payments. In case type is "Salario"
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.SalaryAdvanceDTO.userID">
+            <summary>
+            User ID
+            </summary>
+        </member>
+        <member name="T:GestorRRHH_BackEnd_Api.Models.DTO.VacationDTO">
+            <summary>
+            DTO for vacation request
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.VacationDTO.CompanyID">
+            <summary>
+            Company ID
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.VacationDTO.EmployeeCode">
+            <summary>
+            Employee code
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.VacationDTO.dateStart">
+            <summary>
+            Starting date
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.VacationDTO.dateEnd">
+            <summary>
+            Ending date, the next labor day will be back
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.VacationDTO.comments">
+            <summary>
+            Comments for this request
+            </summary>
+        </member>
+        <member name="P:GestorRRHH_BackEnd_Api.Models.DTO.VacationDTO.UserID">
+            <summary>
+            User name associated to the request
+            </summary>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Utils.Utils.RandomString(System.Int32,System.Boolean)">
+            <summary>
+            Random string
+            </summary>
+            <param name="size">Length</param>
+            <param name="lowerCase">If has lower case</param>
+            <returns></returns>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Utils.Utils.RandomNumber(System.Int32,System.Int32)">
+            <summary>
+            Random numbr
+            </summary>
+            <param name="min">Min value</param>
+            <param name="max">Max value</param>
+            <returns></returns>
+        </member>
+        <member name="M:GestorRRHH_BackEnd_Api.Utils.Utils.RandomPassword">
+            <summary>
+            Generate random password
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WebApplication1.Models.AuthenticateResponse">
+            <summary>
+            Response for 200 status code
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.AuthenticateResponse.Nombre">
+            <summary>
+            Name for the user
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.AuthenticateResponse.Token">
+            <summary>
+            JWT for the session
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.AuthenticateResponse.Companies">
+            <summary>
+            Allowed companies
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.AuthenticateResponse.Elementos">
+            <summary>
+            List of allowed options
+            </summary>
+        </member>
+        <member name="T:WebApplication1.Models.CompanyAssoc">
+            <summary>
+            Company associated
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.CompanyAssoc.CompanyID">
+            <summary>
+            CompanyID
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.CompanyAssoc.CompanyName">
+            <summary>
+            Company name
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.Catalog.ID">
+            <summary>
+            ID general del servicio
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.Catalog.catalogCode">
+            <summary>
+            Catalog code. Is unique
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.Catalog.catalogName">
+            <summary>
+            Catalog name for front end
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.CatalogDetail.catalogID">
+            <summary>
+            The catalog belong to
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.CatalogDetail.valueDetail">
+            <summary>
+            Value of the item
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.CatalogDetail.valueDescription">
+            <summary>
+            Description for the front end
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.CatalogDetail.enabled">
+            <summary>
+            Enabled or not
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.User.NoT">
+            <summary>
+            Numero de intentos
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.UserPwdReset.userName">
+            <summary>
+            Usuario que solicita
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.UserPwdReset.emailSended">
+            <summary>
+            A qué correo fue enviado
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.UserPwdReset.OTP">
+            <summary>
+            One time password para confirmar
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.UserPwdReset.dateRequested">
+            <summary>
+            fecha solicitada
+            </summary>
+        </member>
+        <member name="P:WebApplication1.Models.UserPwdReset.validUntil">
+            <summary>
+            Fecha máxima válida
+            </summary>
+        </member>
+    </members>
+</doc>

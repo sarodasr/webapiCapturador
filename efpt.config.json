@@ -1,0 +1,105 @@
+﻿{
+   "CodeGenerationMode": 1,
+   "ContextClassName": "GestorRRHHContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": "Data",
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "WebApplication1",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Catalog]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CatalogDetail]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CertificateRequest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Company]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employee]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Option]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Role]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RoleOption]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SalaryAdvance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[User]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserCompany]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserPasswordHistory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserPwdReset]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Vacation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sp_cambio_clave]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[sp_login]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[sp_nueva_clave]",
+         "ObjectType": 1
+      }
+   ],
+   "UiHint": "hpmini-srodas.GestorRRHH.dbo",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
